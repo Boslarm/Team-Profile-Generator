@@ -7,6 +7,7 @@ const Intern = require('./lib/Intern');
 
 //i need an array to push all the employee data into to export
 let employeeArr = [];
+console.log(employeeArr);
 
 //list prompt questions for all roles
 const questions = [ //array of objects
@@ -65,7 +66,7 @@ function init() {
 function newEmployee() {
     inquirer.prompt(questions).then((response) => {
         let name = response.name;
-        let id = respone.id;
+        let id = response.id;
         let email = response.email;
         let role = response.role;
         let officeNumber;
