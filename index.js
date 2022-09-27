@@ -4,6 +4,10 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const { inherits } = require('util');
+
+//i need an array to push all the employee data into to export
+let employeeArr = [];
 
 //list prompt questions for all roles
 const questions = [ //array of objects
@@ -54,3 +58,42 @@ internQuestions = [
         message: "Which School did the intern attend?"
     }
 ]
+
+//add functionality
+function init() {
+    newEmployee()
+}
+function newEmployee() {
+    inquirer.prompt(questions).then((response) => {
+        let name = response.name;
+        let id = respone.id;
+        let email = response.email;
+        let role = response.role;
+        let officeNumber;
+        let gitHub;
+        let school;
+
+        if (role === 'Manager') {
+            inquirer.prompt(managerQuestions).then((response) => { //prompts manager question
+                officeNumber = response.officeNumber;
+                let employee = new Manager(name, id, email, officeNumber); //adds employee as manager
+                employeeArr.push(employee); //pushes data to array for export
+            });
+        }
+        else if (role === 'Engineer') {
+            inquirer.prompt(engineerQuestions).then((response) => {
+                gitHub = response.gitHub;
+                let employee = new Engineer(name, id, email, gitHub);
+                employeeArr.push(employee);
+            });
+        }
+        else if (role === 'Intern') {
+            inquirer.prompt(internQuestions).then((response) => {
+                school = response.school;
+                let employee = new Intern(name, id, email, school);
+                employeeArr.push(employee);
+            });
+        }
+    }
+)}
+init();

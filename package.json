@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Boslarm/Team-Profile-Generator#readme",
   "dependencies": {
+    "inquirer": "^9.1.2",
     "jest": "^29.0.3"
   }
 }
