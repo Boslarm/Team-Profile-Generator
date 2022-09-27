@@ -4,7 +4,7 @@
   "description": "## User Story AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Boslarm/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^9.1.2",
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.0.3"
   }
 }
