@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Boslarm/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/Boslarm/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/Boslarm/Team-Profile-Generator#readme",
+  "dependencies": {
+    "jest": "^29.0.3"
+  }
 }
