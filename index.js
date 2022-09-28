@@ -5,6 +5,8 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const createHTML = require('./lib/createHTML')
+
 //i need an array to push all the employee data into to export
 let employeeArr = [];
 console.log(employeeArr);
@@ -14,7 +16,7 @@ const questions = [ //array of objects
     {
         type: 'input',
         name: 'name',
-        message: "What your employee's name?"
+        message: "What is your employee's name?"
     },
     {
         type: 'input',
@@ -113,7 +115,7 @@ function addEmployee() {
         else if (createEmployee === false) {
             console.log("Success! Your team profile has been created. View it in the 'dist' folder.")
             //write/create the file
-            fs.writeFile('./dist/index.html', err => {
+            fs.writeFile('./dist/index.html', createHTML(employeeArr), err => { //pass array through here
                 if (err) {
                     console.log(err)
                 }
