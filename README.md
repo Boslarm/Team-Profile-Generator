@@ -1,5 +1,11 @@
 # Team-Profile-Generator
 
+## Description
+The purpose of this assignment is to demonstrate my understanding and implimentation of node.js We were asked to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. We used the inquirer npm to create prompts in the terminal and implemented new course material from the four pillars of Object Oriented Programming. Also, because testing is key to making code maintainable, we were provided tests to run our application through to ensure it met the criteria.
+
+## Video Walkthrough & Testing
+[Video](https://app.castify.com/view/5139db1d-49c9-4b01-b3d9-dd7b32c40dd7)
+
 ## User Story
 AS A manager
 I WANT to generate a webpage that displays my team's basic info
