@@ -40,7 +40,7 @@ const questions = [ //array of objects
 managerQuestions = [
     {
         type: 'input',
-        name: 'officeNumer',
+        name: 'officeNumber',
         message: "What is the manager's office number?"
     }
 ]
